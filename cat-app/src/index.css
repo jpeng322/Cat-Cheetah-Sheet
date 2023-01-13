@@ -81,7 +81,14 @@ button:focus-visible {
   display: flex;
   gap: 1rem
 } */
+/* @import url('https://fonts.googleapis.com/css2?family=Chicle&display=swap'); */
 
+#root {
+  /* font-family: 'Chicle', cursive; */
+  font-family: 'Short Stack', cursive;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Short+Stack&display=swap');
 
 .breed-img {
   width: 400px;

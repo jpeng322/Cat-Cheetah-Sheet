@@ -33,3 +33,15 @@ svg {
  border: none !important;
 }
 
+.col {
+   display: flex;
+   flex-direction: column;
+}
+
+.filled {
+    fill: #FED049
+}
+
+.empty {
+    fill: rgb(165, 159, 159)
+}
