@@ -54,8 +54,8 @@ const CatDetails = () => {
                         }}><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 278.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z" /></svg></Button>
                         </div>
                     </Col>
-                    <Col>
-                        <div> {imageData && <Image className="detail-image" src={imageData[imageNumber].url} />}</div>
+                    <Col xs={12} md={10} xxl={6}>
+                        <div> {imageData && <Image fluid thumbnail className="detail-image" src={imageData[imageNumber].url} />}</div>
                     </Col>
                     {/* <Image  src={imageData[0].url} alt="" /> */}
                     <Col>

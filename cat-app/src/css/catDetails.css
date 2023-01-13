@@ -1,5 +1,9 @@
 .detail-image {
-    width: 500px !important
+    /* width: 500px !important */
+    float: left;
+    width:  1500px;
+    height: 450px !important;
+    object-fit: cover;
 }
 
 .detail-container {
