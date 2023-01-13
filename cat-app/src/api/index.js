@@ -21,9 +21,9 @@ export const getBreeds = async () => {
 export const getBreedInfo = async (catName) => {
     const response = await axios.get("https://api.thecatapi.com/v1/breeds/")
     const data = response.data
-    console.log(data, catName)
+    // console.log(data, catName)
     const catData = data.find(cat => cat.id === catName)
-    console.log(catData)
+    // console.log(catData)
     return catData
 }
 

@@ -1,0 +1,35 @@
+.detail-image {
+    width: 500px !important
+}
+
+.detail-container {
+    /* border: 1px solid red; */
+    /* display: flex; */
+}
+
+.top >* {
+    /* border: 1px solid black !important; */
+    /* display: flex !important; */
+}
+.detail-row {
+    /* border: 1px solid red; */
+    margin-top: 1rem !important;
+}
+
+.col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     padding: .5rem;
+}
+
+svg {
+    width: 20px;
+}
+
+.detail-button {
+ /* border: 1px solid red !important; */
+ /* background-color: none !important; */
+ border: none !important;
+}
+
