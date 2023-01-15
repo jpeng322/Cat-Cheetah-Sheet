@@ -1,22 +1,58 @@
 import { NavLink, Outlet } from "react-router-dom";
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import "../css/layout.css"
-import ImageContextProvider from "../context/imageContext";
-
+// import ImageContextProvider from "../context/imageContext";
+import NavComp from "../components/Navbar";
+import BlackCat from "../../images/black-cat.png"
+// import ColorCat from "../../images/color-cat.png"
+import ColorCat from "../../images/color-cat.png"
+import { Image, Row, Container, Col } from "react-bootstrap";
 const Layout = () => {
     return (
         <>
-            <ImageContextProvider>
-                <Container className="home-container" fluid >
-                    <nav>
-                        <NavLink className="home-link" to="/breeds">Home</NavLink>
-                        <NavLink to="/search">Search</NavLink>
+            {/* <ImageContextProvider> */}
+            <div className="home-container">
+                {/* <Container className="home-container" > */}
+                <div className="home-div">
+                    <nav className="home-nav">
+                        <NavComp />
                     </nav>
+                    {/* <nav>
+                        <NavLink className="home-link" to="/">Home</NavLink>
+                        <NavLink to="/search">Search</NavLink>
+                    </nav> */}
+                    <Container className="home-main" fluid>
+                        {/* <main> */}
+                        {/* <Row> */}
+                        {/* <Container> */}
+                        <Row>
+                            <Col>
+                            {/* <div className="cat-image-container"> */}
+                                <Image className="black-cat" src={BlackCat}></Image>
+                                <div className="flaticon">Flaticon by: rungreangfangsai</div>
+                            {/* </div> */}
+                            </Col>
+                            {/* <img className="black-cat" src={BlackCat} alt="" /> */}
+                            <Col>
+                            <h1> Welcome to my page!</h1>
+                            </Col>
+                            {/* <img className="color-cat" src={ColorCat} alt="" /> */}
+                            {/* <div className="cat-image-container"> */}
+                            <Col>
+                                <Image className="color-cat" src={ColorCat}></Image>
+                                <div className="flaticon color">Flaticon by: Freepik</div>
+                                </Col>
+                            {/* </div> */}
+                        </Row>
+                        {/* Ima */}
+                        {/* </Row> */}
+                        {/* </Container> */}
+                        {/* </main> */}
+                    </Container>
                     <Outlet />
-                </Container>
-            </ImageContextProvider>
+                    {/* </Container> */}
+                </div>
+            </div>
+            {/* </ImageContextProvider> */}
         </>
     );
 }
