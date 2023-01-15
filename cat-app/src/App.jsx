@@ -3,11 +3,15 @@ import reactLogo from './assets/react.svg'
 import './App.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import { getBreedInfo, getBreeds, getImages } from './api'
+import ImageContextProvider from './context/imageContext'
 //pages
 import Layout from './pages/layout'
 import BreedsPage from './pages/breed'
 import CatDetails from './pages/catDetails'
 import CatDetailsImages from './pages/catDetailsImages'
+import Search from './pages/search'
+
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -16,6 +20,7 @@ const router = createBrowserRouter([
       {
         path: "/breeds",
         element: <BreedsPage />,
+        id: "breeds",
         loader: () => {
           return getBreeds()
         }
@@ -31,18 +36,10 @@ const router = createBrowserRouter([
       return getBreedInfo(catName)
 
     },
-    // children: [{
-    //   path: "/breeds/images/:catName",
-    //   element: <CatDetailsImages />,
-    //   loader: ({ params }) => {
-    //     const catName = params.catName
-
-    //     return getImages(catName)
-
-    //   }
-    // }
-
-    // ]
+  },
+  {
+    path: "/search",
+    element: <Search />,
   }
 ])
 

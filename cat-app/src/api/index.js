@@ -31,5 +31,6 @@ export const getImages = async (catName) => {
     const response = await axios.get(`https://api.thecatapi.com/v1/images/search?limit=10&breed_ids=${catName}&api_key=${api_key}`)
 
     const imageData = response.data
+    console.log(imageData)
     return imageData
 }

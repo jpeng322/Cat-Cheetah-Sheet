@@ -97,7 +97,6 @@ button:focus-visible {
 }
 
 body {
-  /* border: 1px solid red; */
   display: flex;
   justify-content: center;
   /* width: 100%; */
@@ -118,7 +117,7 @@ body {
 
 
 
-img:hover {
+.breed-img:hover {
   opacity: .8;
   filter: alpha(opacity=100);
   transform: scale(1.02);
@@ -137,9 +136,46 @@ img:hover {
 }
 
 .breed-column>div {
-  /* border: 1px solid red; */
+  /* border: 1px solid red !important; */
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
+}
+
+.filter-row {
+/* border: 1px solid red; */
+display: flex;
+justify-content: center;
+/* align-items: center; */
+}
+
+.breed-filter-container {
+  /* border: 1px solid red; */
+  width: 25rem !important;
+  justify-self: center;
+}
+.breed-filter {
+  border-radius: .5rem;
+  padding: 1rem !important;
+  transition: .1s
+}
+
+.input-group-text {
+  /* border: 1px solid red !important; */
+  padding: 1rem !important;
+}
+
+.input-group-text svg {
+  fill: rgb(72, 67, 67);;
+}
+.breed-filter:hover{
+  background-color: rgb(238, 231, 231, .5);
+}
+
+
+nav {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
 }
