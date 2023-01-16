@@ -6,6 +6,7 @@ import BlackCat from "../../images/black-cat.png"
 // import ColorCat from "../../images/color-cat.png"
 import ColorCat from "../../images/color-cat.png"
 import { Image, Row, Container, Col } from "react-bootstrap";
+import Home from "./home";
 const Layout = () => {
     return (
         <>
@@ -20,34 +21,7 @@ const Layout = () => {
                         <NavLink className="home-link" to="/">Home</NavLink>
                         <NavLink to="/search">Search</NavLink>
                     </nav> */}
-                    <Container className="home-main" fluid>
-                        {/* <main> */}
-                        {/* <Row> */}
-                        {/* <Container> */}
-                        <Row>
-                            <Col>
-                            {/* <div className="cat-image-container"> */}
-                                <Image className="black-cat" src={BlackCat}></Image>
-                                <div className="flaticon">Flaticon by: rungreangfangsai</div>
-                            {/* </div> */}
-                            </Col>
-                            {/* <img className="black-cat" src={BlackCat} alt="" /> */}
-                            <Col>
-                            <h1> Welcome to my page!</h1>
-                            </Col>
-                            {/* <img className="color-cat" src={ColorCat} alt="" /> */}
-                            {/* <div className="cat-image-container"> */}
-                            <Col>
-                                <Image className="color-cat" src={ColorCat}></Image>
-                                <div className="flaticon color">Flaticon by: Freepik</div>
-                                </Col>
-                            {/* </div> */}
-                        </Row>
-                        {/* Ima */}
-                        {/* </Row> */}
-                        {/* </Container> */}
-                        {/* </main> */}
-                    </Container>
+                    {/* <Home /> */}
                     <Outlet />
                     {/* </Container> */}
                 </div>

@@ -41,7 +41,7 @@ const CatDetails = () => {
     return (
         <div>
             <Container fluid className="detail-container p-5 d-flex flex-column gap-5">
-                <NavLink to="/breeds">Home</NavLink>
+                {/* <NavLink to="/breeds">Home</NavLink> */}
                 <Row className="detail-row top">
                     <Col xs={{ order: 2 }} xxl={{ order: 1 }}>
                         <div><Button variant="outline-secondary" className="detail-button" onClick={() => {

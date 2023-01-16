@@ -109,9 +109,9 @@ nav {
 
 .home-nav {
   display: flex;
-  padding: 3rem !important;
+  padding: 3rem 0rem 0rem 0rem !important;
 
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   /* width: 100%; */
   /* width: 100vw; */
 }
@@ -141,6 +141,7 @@ body {
 
 
 .home-main {
+  /* margin-top: 5rem !important; */
   display: flex;
 
   justify-content: center;
@@ -162,6 +163,7 @@ body {
 
 .flaticon {
   text-align: center;
+  font-size: .75rem;
 }
 
 .flaticon.color {
@@ -267,7 +269,8 @@ nav {
 
 
 @media all and (min-width: 630px) {
-
+  .home-main {
+    margin-top: 5rem !important; }
 
   .color-cat {
     width: 210px;
