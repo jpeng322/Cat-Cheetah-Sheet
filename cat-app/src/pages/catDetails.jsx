@@ -7,24 +7,25 @@ import "../css/catDetails.css"
 
 const CatDetails = () => {
 
-    const [imageData, setImageData] = useState()
+    // const [imageData, setImageData] = useState()
     const [imageNumber, setImageNumber] = useState(0)
     const catDetail = useLoaderData()
 
+    // console.log(catDetail)
 
-    useEffect(() => {
-        const api_key = import.meta.env.VITE_API_KEY
-        const getImages = async () => {
-            const response = await axios.get(`https://api.thecatapi.com/v1/images/search?limit=10&breed_ids=${catDetail.id}&api_key=${api_key}`)
+    // useEffect(() => {
+    //     const api_key = import.meta.env.VITE_API_KEY
+    //     const getImages = async () => {
+    //         const response = await axios.get(`https://api.thecatapi.com/v1/images/search?limit=10&breed_ids=${catDetail.id}&api_key=${api_key}`)
 
-            const imageData = response.data
-            console.log(imageData)
-            setImageData(imageData)
-            return imageData
-        }
-        getImages()
-    }
-        , [])
+    //         const imageData = response.data
+    //         console.log(imageData)
+    //         setImageData(imageData)
+    //         return imageData
+    //     }
+    //     getImages()
+    // }
+    //     , [])
 
     const createStars = (rating) => {
         let stars = ""
@@ -47,7 +48,7 @@ const CatDetails = () => {
                         <div><Button variant="outline-secondary" className="detail-button" onClick={() => {
                             console.log(imageNumber)
                             if (imageNumber === 0) {
-                                setImageNumber(imageData.length - 1)
+                                setImageNumber(catDetail["catImages"].length - 1)
                             } else {
                                 setImageNumber(imageNumber - 1)
                             }
@@ -55,13 +56,13 @@ const CatDetails = () => {
                         </div>
                     </Col>
                     <Col className="image-col" d-flex justify-content-center xs={{ span: 10, order: 1 }} md={11} lg={12} xxl={{ span: 6, order: 2 }}>
-                        <div> {imageData && <Image fluid thumbnail className="detail-image" src={imageData[imageNumber].url} />}</div>
+                        <div> {catDetail["catImages"] && <Image fluid thumbnail className="detail-image" src={catDetail["catImages"][imageNumber].url} />}</div>
                     </Col>
                     {/* <Image  src={imageData[0].url} alt="" /> */}
                     <Col xs={{ order: 3 }} xxl={{ order: 3 }}>
                         <div><Button variant="outline-secondary" className="detail-button" onClick={() => {
                             console.log(imageNumber)
-                            if (imageNumber === imageData.length - 1) {
+                            if (imageNumber === catDetail["catImages"].length - 1) {
                                 setImageNumber(0)
                             } else {
                                 setImageNumber(imageNumber + 1)
@@ -74,42 +75,42 @@ const CatDetails = () => {
 
                 <div>
                     <Row className="detail-row  d-flex justify-content-center">
-                        <Col className="col"> <h1>{catDetail.name}</h1></Col>
+                        <Col className="col"> <h1>{catDetail["catData"].name}</h1></Col>
                     </Row>
                     {/* <Row className="detail-row  d-flex justify-content-center">
                         <Col className="col"> <h3>{catDetail.temperament.replaceAll(",", " 🐾 ")}</h3></Col>
                     </Row> */}
                     <Row className="detail-row">
                         <Col className="col d-flex justify-content-center">
-                            <div>Lifespan: {catDetail.life_span} years</div>
+                            <div>Lifespan: {catDetail["catData"].life_span} years</div>
                         </Col>
                         <Col className="col  d-flex justify-content-center">
-                            <div>Weight: {catDetail.weight.imperial} lbs</div>
+                            <div>Weight: {catDetail["catData"].weight.imperial} lbs</div>
                         </Col>
                         <Col className="col  d-flex justify-content-center">
-                            <div>Hypoallergenic: {catDetail.hypoallergenic === 0 ? "No" : "Yes"}</div>
+                            <div>Hypoallergenic: {catDetail["catData"].hypoallergenic === 0 ? "No" : "Yes"}</div>
                         </Col>
                     </Row>
                     <Row className=" detail-row d-flex">
                         <Col className="col  d-flex justify-content-center">
                             <div>Affection Level: </div>
-                            <div dangerouslySetInnerHTML={{ __html: createStars(catDetail.affection_level) }}></div>
+                            <div dangerouslySetInnerHTML={{ __html: createStars(catDetail["catData"].affection_level) }}></div>
                         </Col>
                         <Col className="col d-flex justify-content-center">
                             <div>Adaptability: </div>
-                            <div dangerouslySetInnerHTML={{ __html: createStars(catDetail.adaptability) }}></div>
+                            <div dangerouslySetInnerHTML={{ __html: createStars(catDetail["catData"].adaptability) }}></div>
                         </Col>
                         <Col className="col  d-flex justify-content-center">
                             <div>Child Friendly:</div>
-                            <div dangerouslySetInnerHTML={{ __html: createStars(catDetail.child_friendly) }}></div>
+                            <div dangerouslySetInnerHTML={{ __html: createStars(catDetail["catData"].child_friendly) }}></div>
                         </Col>
                         <Col className="col  d-flex justify-content-center">
                             <div>Intelligence:</div>
-                            <div dangerouslySetInnerHTML={{ __html: createStars(catDetail.intelligence) }}></div>
+                            <div dangerouslySetInnerHTML={{ __html: createStars(catDetail["catData"].intelligence) }}></div>
                         </Col>
                     </Row>
                     <Row className=" detail-row d-flex">
-                        {catDetail.cfa_url ? <div>More information: <a href={catDetail.cfa_url} target="_blank">{catDetail.cfa_url} </a> </div> : ""}
+                        {catDetail["catData"].cfa_url ? <div>More information: <a href={catDetail["catData"].cfa_url} target="_blank">{catDetail["catData"].cfa_url} </a> </div> : ""}
                     </Row>
                 </div>
             </Container>
