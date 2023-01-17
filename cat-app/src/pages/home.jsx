@@ -22,6 +22,7 @@ const Home = () => {
                 {/* <img className="black-cat" src={BlackCat} alt="" /> */}
                 <Col>
                     <h1> Welcome to my page!</h1>
+                    <h3>A site to learn about cats.</h3>
                 </Col>
                 {/* <img className="color-cat" src={ColorCat} alt="" /> */}
                 {/* <div className="cat-image-container"> */}
