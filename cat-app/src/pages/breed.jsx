@@ -25,7 +25,7 @@ const BreedsPage = () => {
             {/* <nav>
                 <NavComp />
             </nav> */}
-            <Container fluid>
+            <Container className="breed-container" fluid>
                 {/* <Row>
                 <input className="breed-filter" type="text" onChange={(e) => setSelectedCat(e.target.value)} placeholder="Filter by Cat Name" />
             </Row> */}

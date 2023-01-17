@@ -5,10 +5,10 @@ import "../css/navbar.css"
 const NavComp = () => {
     return (
         <nav className="home-nav">
-            <Navbar sm={3} md={6} fluid expand="lg">
+            <Navbar  fluid expand="lg">
                 {/* <Container> */}
                 <Navbar.Brand as={NavLink} to="/">
-                    <h3>Breed </h3>
+                    <h3>Cat </h3>
                     <h3>Cheetah-</h3>
                     <h3>Sheet</h3>
                 </Navbar.Brand>
@@ -17,6 +17,7 @@ const NavComp = () => {
                     <Nav className="me-auto">
                         <Nav.Link as={NavLink} to="/">Home</Nav.Link>
                         <Nav.Link as={NavLink} to="/breeds">Breeds</Nav.Link>
+                        <Nav.Link as={NavLink} to="/faq">FAQ</Nav.Link>
                     </Nav>
                     {/* <Nav className="me-auto">
                         <Nav.Link href="/">Home</Nav.Link>
