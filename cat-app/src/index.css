@@ -47,7 +47,7 @@ body {
   width: 100%;
   height: 100%;
   justify-content: center;
-
+/* padding: 0 !important; */
 }
 
 .home-div {
@@ -63,21 +63,25 @@ body {
 .home-main {
   /* margin-top: 5rem !important; */
   display: flex;
-  /* border: 1px solid red; */
   justify-content: center;
   text-align: center;
+}
+
+.home-row {
+  display: flex;
+  flex-direction: column;
 }
 
 
 
 .color-cat {
-  width: 420px;
+  width: 450px;
 
 
 }
 
 .black-cat {
-  width: 450px;
+  width: 470px;
 
 }
 
@@ -162,7 +166,7 @@ body {
 
 .input-group-text svg {
   fill: rgb(72, 67, 67);
-  
+
 }
 
 .breed-filter:hover {
@@ -191,21 +195,23 @@ nav {
 }
 
 
-@media all and (min-width: 630px) {
+@media all and (min-width: 670px) {
   .home-main {
-    margin-top: 5rem !important;
+    /* margin-top: 5rem !important; */
   }
 
   .color-cat {
-    width: 210px;
+    width: 350px;
 
 
   }
 
   .black-cat {
-    width: 220px;
+    width: 380px;
     /* border: 1px solid orange; */
   }
+
+
 
 }
 
@@ -214,18 +220,23 @@ nav {
 
 
   .color-cat {
-    width: 320px;
+    width: 350px;
 
 
   }
 
   .black-cat {
-    width: 330px;
+    width: 380px;
     /* border: 1px solid orange; */
+    /* order: 2 */
   }
 
   .home-main {
-    height: 80vh;
+    height: 90vh;
+  }
+
+  .home-row {
+    flex-direction: row;
   }
 }
 
@@ -256,4 +267,3 @@ nav {
 
   }
 }
-

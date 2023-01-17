@@ -12,7 +12,7 @@ const Home = () => {
             {/* <main> */}
             {/* <Row> */}
             {/* <Container> */}
-            <Row>
+            <Row className="home-row">
                 <Col>
                     {/* <div className="cat-image-container"> */}
                     <Image className="black-cat" src={BlackCat}></Image>
