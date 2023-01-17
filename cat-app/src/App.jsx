@@ -10,7 +10,7 @@ import BreedsPage from './pages/breed'
 import Home from './pages/home'
 import CatDetails from './pages/catDetails'
 import CatDetailsImages from './pages/catDetailsImages'
-import Search from './pages/search'
+import Faq from './pages/faq'
 
 
 const router = createBrowserRouter([
@@ -39,6 +39,10 @@ const router = createBrowserRouter([
           return getBreedInfo(catName)
     
         },
+      },
+      {
+        path: "/faq",
+        element: <Faq />
       }
     ]
   },
@@ -51,11 +55,7 @@ const router = createBrowserRouter([
   //     return getBreedInfo(catName)
 
   //   },
-  // },
-  {
-    path: "/search",
-    element: <Search />,
-  }
+
 ])
 
 
