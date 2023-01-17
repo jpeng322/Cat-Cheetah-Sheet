@@ -50,8 +50,10 @@ border: 2px solid #212529 !important;
 }
 
 .navbar-toggler:hover {
-    transition: .3s;
+    transition: .5s;
     transform: translateY(-1px);
+    background-color: #e1e3e79f ;
+
 }
 
 

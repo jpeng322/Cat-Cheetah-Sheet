@@ -38,7 +38,7 @@ body {
   display: flex;
   justify-content: center;
   width: 100%;
-  /* border: 1px solid blue; */
+
   /* height: auto; */
 
 }
@@ -67,6 +67,7 @@ body {
   display: flex;
   justify-content: center;
   text-align: center;
+
 }
 
 .home-row {
@@ -161,6 +162,11 @@ body {
   transition: .1s
 }
 
+.no-cat-text {
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+}
 .input-group-text {
   /* border: 1px solid red !important; */
   padding: 1rem !important;

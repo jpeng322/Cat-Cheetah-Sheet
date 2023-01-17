@@ -15,9 +15,10 @@ const BreedsPage = () => {
     const [selectedCat, setSelectedCat] = useState()
     console.log(selectedCat)
 
-    const filteredCats = breedData.filter(cat => cat.name.toLowerCase().includes(selectedCat))
-    // console.log(breedData.filter(cat => cat.name.inclues(selectedCat )))
-    console.log(filteredCats)
+    const length = selectedCat && selectedCat.length
+    const filteredCats = breedData.filter(cat => cat.name.toLowerCase().substring(0, length) === selectedCat)
+
+   
 
     const mapData = selectedCat ? filteredCats : breedData
     return (
@@ -36,7 +37,7 @@ const BreedsPage = () => {
                     </div>
                 </Row>
                 <Row className="breed-row">
-                    {mapData.length === 0 ? <div>No cat found </div> : mapData.map(cat => {
+                    {mapData.length === 0 ? <div className="no-cat-text">No cat found </div> : mapData.map(cat => {
                         // console.log(src={`https://cdn2.thecatapi.com/images/${cat.reference_image_id}.jpg`})
                         return <Col className="breed-column" xs={8} md={5} xxl={3} >
                             <div key={cat.id}>
