@@ -2,7 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import { getBreedInfo, getBreeds, getImages } from './api'
+import { getBreedInfo, getBreeds } from './api'
 import ImageContextProvider from './context/imageContext'
 //pages
 import Layout from './pages/layout'
@@ -21,7 +21,7 @@ const router = createBrowserRouter([
       {
         path: "/breeds",
         element: <BreedsPage />,
-        // id: "breeds",
+        id: "breeds",
         loader: () => {
           return getBreeds()
         }

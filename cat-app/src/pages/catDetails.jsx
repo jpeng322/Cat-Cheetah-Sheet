@@ -44,8 +44,8 @@ const CatDetails = () => {
             <Container fluid className="detail-container p-5 d-flex flex-column gap-5">
                 {/* <NavLink to="/breeds">Home</NavLink> */}
                 <Row className="detail-row top">
-                    <Col xs={{ order: 2 }} xxl={{ order: 1 }}>
-                        <div><Button variant="outline-secondary" className="detail-button" onClick={() => {
+                    <Col xs={{ order: 2 }} md={{ order: 1 }} xxl={{ order: 1 }} className="image-button-column">
+                        <div className="button-div"><Button variant="outline-secondary" className="detail-button" onClick={() => {
                             console.log(imageNumber)
                             if (imageNumber === 0) {
                                 setImageNumber(catDetail["catImages"].length - 1)
@@ -55,12 +55,12 @@ const CatDetails = () => {
                         }}><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 278.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z" /></svg></Button>
                         </div>
                     </Col>
-                    <Col className="image-col" d-flex justify-content-center xs={{ span: 10, order: 1 }} md={11} lg={12} xxl={{ span: 6, order: 2 }}>
+                    <Col className="image-col" d-flex justify-content-center xs={{ span: 12, order: 1 }} md={8} lg={8} xxl={{ span: 7, order: 2 }}>
                         <div> {catDetail["catImages"] && <Image fluid thumbnail className="detail-image" src={catDetail["catImages"][imageNumber].url} />}</div>
                     </Col>
                     {/* <Image  src={imageData[0].url} alt="" /> */}
-                    <Col xs={{ order: 3 }} xxl={{ order: 3 }}>
-                        <div><Button variant="outline-secondary" className="detail-button" onClick={() => {
+                    <Col xs={{ order: 3 }} xxl={{ order: 3 }} className="image-button-column">
+                        <div className="button-div"><Button variant="outline-secondary" className="detail-button" onClick={() => {
                             console.log(imageNumber)
                             if (imageNumber === catDetail["catImages"].length - 1) {
                                 setImageNumber(0)
@@ -110,7 +110,11 @@ const CatDetails = () => {
                         </Col>
                     </Row>
                     <Row className=" detail-row d-flex">
-                        {catDetail["catData"].cfa_url ? <div>More information: <a href={catDetail["catData"].cfa_url} target="_blank">{catDetail["catData"].cfa_url} </a> </div> : ""}
+                        <Col className="more-info-col">
+                            {catDetail["catData"].cfa_url ? <div className="more-info">
+                                <div>More information: </div>
+                                <a href={catDetail["catData"].cfa_url} target="_blank">{catDetail["catData"].cfa_url} </a> </div> : ""}
+                        </Col>
                     </Row>
                 </div>
             </Container>
