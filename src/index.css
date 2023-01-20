@@ -20,9 +20,6 @@ nav {
 
 }
 
-.navbar {
-  /* margin: 0 !important; */
-}
 
 
 
@@ -126,10 +123,7 @@ body {
   opacity: .8;
   filter: alpha(opacity=100);
   transform: scale(1.02);
-  /* object-fit: contain;
-  transition: 1s; */
-  /* border: 1px solid red; */
-  /* width: 100%; */
+/
 }
 
 .breed-row {
@@ -191,10 +185,13 @@ body {
   padding: 1rem !important;
   transition: .1s
 }
-.breed-column img, .breed-column a {
+
+.breed-column img,
+.breed-column a {
   /* border: 1px solid red; */
   width: 100%;
 }
+
 .no-cat-text {
   display: flex;
   justify-content: center;
