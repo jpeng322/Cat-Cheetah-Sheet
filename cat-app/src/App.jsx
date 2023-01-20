@@ -1,15 +1,14 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+
 import './App.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import { getBreedInfo, getBreeds } from './api'
-import ImageContextProvider from './context/imageContext'
+
 //pages
 import Layout from './pages/layout'
 import BreedsPage from './pages/breed'
 import Home from './pages/home'
 import CatDetails from './pages/catDetails'
-import CatDetailsImages from './pages/catDetailsImages'
+
 import Faq from './pages/faq'
 
 
@@ -35,9 +34,9 @@ const router = createBrowserRouter([
         element: <CatDetails />,
         loader: ({ params }) => {
           const catName = params.catName
-    
+
           return getBreedInfo(catName)
-    
+
         },
       },
       {

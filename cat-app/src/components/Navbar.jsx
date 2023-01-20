@@ -7,7 +7,7 @@ const NavComp = () => {
 
     return (
         <nav className="home-nav">
-            <Navbar fluid expand="lg">
+            <Navbar  expand="lg">
                 {/* <Container> */}
                 <Navbar.Brand as={NavLink} to="/">
                     <h3>Cat </h3>

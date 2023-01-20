@@ -11,21 +11,6 @@ const CatDetails = () => {
     const [imageNumber, setImageNumber] = useState(0)
     const catDetail = useLoaderData()
 
-    // console.log(catDetail)
-
-    // useEffect(() => {
-    //     const api_key = import.meta.env.VITE_API_KEY
-    //     const getImages = async () => {
-    //         const response = await axios.get(`https://api.thecatapi.com/v1/images/search?limit=10&breed_ids=${catDetail.id}&api_key=${api_key}`)
-
-    //         const imageData = response.data
-    //         console.log(imageData)
-    //         setImageData(imageData)
-    //         return imageData
-    //     }
-    //     getImages()
-    // }
-    //     , [])
 
     const createStars = (rating) => {
         let stars = ""
@@ -55,7 +40,7 @@ const CatDetails = () => {
                         }}><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 278.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z" /></svg></Button>
                         </div>
                     </Col>
-                    <Col className="image-col" d-flex justify-content-center xs={{ span: 12, order: 1 }} md={8} lg={8} xxl={{ span: 7, order: 2 }}>
+                    <Col className="image-col d-flex justify-content-center" xs={{ span: 12, order: 1 }} md={8} lg={8} xxl={{ span: 7, order: 2 }}>
                         <div> {catDetail["catImages"] && <Image fluid thumbnail className="detail-image" src={catDetail["catImages"][imageNumber].url} />}</div>
                     </Col>
                     {/* <Image  src={imageData[0].url} alt="" /> */}

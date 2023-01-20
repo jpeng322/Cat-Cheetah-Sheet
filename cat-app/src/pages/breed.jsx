@@ -21,7 +21,6 @@ const BreedsPage = () => {
 
     const [pageNumber, setPageNumber] = useState(1)
     const currentImages = pageNumber === 1 ? breedData.slice(0, pageNumber * numberOfImages) : breedData.slice((pageNumber - 1) * numberOfImages, pageNumber * numberOfImages)
-    console.log(currentImages)
 
 
     const mapData = selectedCat ? filteredCats : currentImages
