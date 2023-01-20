@@ -1,0 +1,33 @@
+footer {
+    /* border: 1px solid red; */
+    /* flex: 1; */
+    margin-top: auto !important;
+    /* height: 200px; */
+    background-color: #E3F6FF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem !important;
+
+}
+
+.footer-links {
+    display: flex;
+    font-size: .85rem;
+}
+
+.footer-links>* {
+    margin-left: .5rem;
+}
+
+footer a {
+    /* border: 1px solid red; */
+    text-decoration: none;
+    color: #212529;
+    transition: .2s;
+}
+
+footer a:hover {
+    color: rgba(0, 0, 0, 0.55)
+}
