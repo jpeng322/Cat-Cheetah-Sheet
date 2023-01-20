@@ -1,5 +1,4 @@
 import { useLoaderData, Link } from "react-router-dom";
-import noImage from '../../images/error-image.png'
 import { useState } from "react";
 import { Form, Row, Col, Image, Container } from "react-bootstrap"
 import PaginationBasic from "../components/PaginationBasic";
